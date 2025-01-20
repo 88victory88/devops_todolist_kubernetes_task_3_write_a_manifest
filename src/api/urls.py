@@ -15,7 +15,7 @@ urlpatterns = [
     path("", include(router.urls))
 ]
 
-urlpatterns = [
+urlpatterns += [
     path('readiness', readiness, name='readiness'),
     path('liveness', liveness, name='liveness'),
 ]

@@ -5,6 +5,7 @@ WORKDIR /app
 #COPY src/requirements.txt .
 RUN pip install -r src/requirements.txt
 
-COPY . .
+#COPY . .
+COPY src /app/src
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "src/manage.py", "runserver", "0.0.0.0:8000"]
